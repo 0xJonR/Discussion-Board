@@ -27,6 +27,8 @@ version := "0.1"
 
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.9.1"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.6.10"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.2"
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the scala-parser-combinators dependency to the set of dependencies
 // that sbt will go and fetch when it starts up.

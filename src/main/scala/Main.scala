@@ -1,5 +1,5 @@
+import backend._
 object Main extends App {
-  println("Hello, World!")
-  val x = 20
-  println(x)
+  println("Hello World")
+
 }

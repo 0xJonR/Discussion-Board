@@ -1,19 +1,14 @@
 package backend
 
-class Post(_postID: Int, _author: String, _title: String, _msg: String) extends Serializable {
-  // constructors become parameters
-  val postID = _postID
+class Post(_uniqueID: Int, _author: String, _title: String, _content: String, _replies: List[Reply] = List[Reply]()) extends Serializable {
+  val uniqueID = _uniqueID
   val author = _author
   val title = _title
-  val message = _msg
-
-  //TODO:
-  /**
-   * override def equality
-   * override def hashcode
-   * override def toString
-   * override def copy
-   * def JSonReads
-   * def toJSON
-   */
+  var content = _content
+  var replies = _replies
+  var instructorResponse: Reply = null
+  def addReply(r: Reply): Unit = {
+    if(r.isInstructorResponse) instructorResponse = r
+    else replies = replies :+ r
+  }
 }
